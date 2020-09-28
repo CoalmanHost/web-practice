@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<title>Сайт для практики по Web-программированию</title>
+<head>
+<!-- <link rel="stylesheet" href="outlines.css"> -->
+</head>
+<body>
+	<header>
+		<h1>Бакуш Георгий M33031</h1>
+		<h2>C#, Unity разработчик</h2>
+		<nav>
+			<a href="https://github.com/CoalmanHost">GitHub</a> | <a href="https://vk.com/bakush99">VK</a> | <a href="https://t.me/bg_coalman">Telegram</a>
+		</nav>
+	</header>
+	
+	<main>
+	<aside style="padding:10px; float:right">
+	<div align="center">
+	<h3>Моё тотемное животное:</h3>
+	<pre>
+	████████████████████████████████████████
+	████████████████▀▀██████████████████████
+	█░▀▀██████████░▄▄░░▀████████████████████
+	█░░░░░░░░░░█▀░▄█░░░░████████████████████
+	█░░░░░░░░░▀▀░░█░░░░░░▀▀█████████████████
+	█░░░░░░░▄▄░░░░░░░░░░░░░░░▀▀█████████████
+	█░░░░▄█▀▀░░░░░░░░░░░▄▄▄░░░░░████████████
+	█░░░▄█░░░░░░░░░░░░░░░▀███░░░░▀██████████
+	█░░▄█▄███▀░░░░░░░░░░░░▀░░░░░░░░░░███████
+	█░░██▀░█▀░░░░░░░░░░░░░░░░░░░░░░░░█▄▀████
+	█░░░░░██░░░░░░░░░░░░░░░░░░░░░░░░░░▀█████
+	█░░░░░█▀▀██░░░░░░░░░░░░░░░░░░░░░░░▄█████
+	█░░░░░░░██▄▄▄░░░░░░░░░░░░░▄▄▄▄▄▄▄███████
+	█░░░░░░░██▀▀░░░░░░░░░░░░░▀▀▀▀░██████████
+	█░░░░░░░░▀░░░░░░░░░░░░░░▄▄▄█████████████
+	█░░░░░░░░░░░░░░▄████████████████████████
+	█░░░░░░░░░░░▄▄██████████████████████████
+	█░░░▄▄▄▄▄▄██████████████████████████████
+	█▄██████████████████████████████████████
+	</pre>
+	</div>
+	</aside>
+	<h3>Кратко о себе:</h3>
+	<article style="margin-right:640px;display:block">В данный момент являюсь студентом Университета ИТМО. Обучаюсь на направлении 09.03.02 "Информационные системы и технологии", третий курс. По профилю не работаю и пока не работал, но очень увлекаюсь разработкой игр разного масштаба на игровом движке Unity. Считаю, что при должном усердии мог бы переквалифицироваться  в кого-либо другого.</article>
+	
+	
+	<div align="left">
+	<h3>Мой опыт:</h3>
+	<ul>
+		<li>Разработка на игровом движке Unity со школьных лет. 6 лет в общей сложности.</li>
+		<li>C/C++ в формате университетских дисциплин. Полгода на каждый язык.</li>
+		<li>Короткий факультативный курс по многопоточности в C++.</li>
+		<li>C# в формате университетской дисциплины. Подкрепление знаний по языку.</li>
+		<li>Разработка <a href="https://github.com/CoalmanHost/HeroesLab">игрового проекта на WPF C#</a> в качестве лабораторных работ по объектно-ориентированному программированию.</li>
+		<li>Разработка <a href="https://github.com/CoalmanHost/CorpMessenger">корпоративного мессенджера</a> в качестве учебной практики в конце 2 курса. Получены начальные знания по сетевому взаимодействию в C#, а также по работе с базами данных по технологии Entity Framework.</li>
+		<li>Разработка <a href="https://github.com/CoalmanHost/Minecart">менеджера модификаций для Minecraft</a> с возможностью их сборки в пакеты. Одни пакеты могут наследоваться от других. Проект не закончен, но первая относительно рабочая версия есть.</li>
+		<li>Java в формате университетской дисциплины.</li>
+		<li>Разработка простой <a href="https://github.com/CoalmanHost/medkit-mod-minecraft">модификации</a> для Minecraft, добавляющей в игру полностью рабочий вариант аптечки.</li>
+	</ul>
+	</div>
+	
+	<div>
+	<h3>Код, за который мне не стыдно:</h3>
+	<code>
+	<pre>
+	public static Shape CreateFromMesh(Mesh mesh)
+    {
+        Shape shape = new GameObject().AddComponent&lt;Shape&gt;();
+        shape.transform.position = Vector3.zero;
+        if (mesh == null)
+        {
+            throw new ArgumentNullException("Mesh was null!");
+        }
+        List&lt;Polygon&gt; polygons = new List&lt;Polygon&gt;();
+        Dictionary&lt;MathPlane, List&lt;int&gt;&gt; planesVertices = new Dictionary&lt;MathPlane, List&lt;int&gt;&gt;();
+        for (int i = 0; i &lt; mesh.triangles.Length; i += 3)
+        {
+            List&lt;int&gt; triangle = new List&lt;int&gt;() { mesh.triangles[i], mesh.triangles[i + 1], mesh.triangles[i + 2] };
+            Vector3 a = mesh.vertices[triangle[0]], b = mesh.vertices[triangle[1]], c = mesh.vertices[triangle[2]];
+            Vector3 normal = Vector3.Cross(b - a, c - a).normalized;
+            float d = -(float)Math.Round(Vector3.Dot(normal, a), precision);
+            MathPlane plane = new MathPlane(normal, d);
+            if (!planesVertices.ContainsKey(plane))
+            {
+                planesVertices.Add(plane, new List&lt;int&gt;());
+            }
+            foreach (var point in triangle)
+            {
+                planesVertices[plane].Add(point);
+            }
+        }
+
+        foreach (var plane in planesVertices.Keys)
+        {
+            StringBuilder infoBuilder = new StringBuilder($"({plane.a})x +({plane.b})y + ({plane.c})z + ({plane.d}) = 0 -&gt; {plane.a + plane.b + plane.c}={-plane.d} : ");
+            foreach (var point in planesVertices[plane])
+            {
+                infoBuilder.Append($"{point}, ");
+            }
+            Debug.Log(infoBuilder.ToString());
+        }
+
+        foreach (var plane in planesVertices.Keys)
+        {
+            Mesh polygonMesh = new Mesh();
+            Vector3[] vertices = new Vector3[planesVertices[plane].Max() - planesVertices[plane].Min() + 1];
+            int[] triangles = new int[planesVertices[plane].Count];
+            foreach (var pointIndex in planesVertices[plane]) ;
+            int min = planesVertices[plane].Min();
+            for (int i = 0; i &lt; planesVertices[plane].Count; i++)
+            {
+                if (!vertices.Contains(mesh.vertices[planesVertices[plane][i]]))
+                {
+                    vertices[planesVertices[plane][i] - min] = mesh.vertices[planesVertices[plane][i]];
+                }
+                triangles[i] = planesVertices[plane][i] - min;
+            }
+            polygonMesh.vertices = vertices;
+            polygonMesh.triangles = triangles;
+            GameObject polygonObject = GameObject.CreatePrimitive(PrimitiveType.Quad);
+            polygonObject.transform.position = Vector3.zero;
+            polygonObject.GetComponent&lt;MeshFilter&gt;().mesh = polygonMesh;
+            Polygon polygon = polygonObject.AddComponent&lt;Polygon&gt;();
+            polygon.parent = shape;
+            polygon.skin = new Skin();
+            polygon.skin.material = polygonObject.GetComponent&lt;MeshRenderer&gt;().material;
+            polygons.Add(polygon);
+        }
+        foreach (var polygon in polygons)
+        {
+            polygon.transform.SetParent(shape.transform);
+        }
+        shape.polygons = polygons;
+        shape.transform.localScale = Vector3.one * 0.2f;
+        return shape;
+    }
+	</pre>
+	</code>
+	</div>
+	
+	<div align="center">
+	<h3>Любимая цитата:</h3>
+	<p><b>Не важно как ты ударишь, а важно какой держишь удар!</strong></b>
+	</div>
+	
+	</main>
+	
+	<footer align="center">
+	CoalmanHost, 2020
+	</footer>
+</body>
+</html>
