@@ -1,3 +1,12 @@
+@font-face {
+	font-family: "Roboto";
+	src: url("Roboto-Regular.ttf")
+}
+@font-face {
+	font-family: "PlayfairDisplay";
+	src: url("PlayfairDisplay-VariableFont_wght.ttf")
+}
+
 body {
 	background-image: url(background.jpg);
 	background-repeat: repeat;
@@ -20,8 +29,7 @@ footer {
 }
 html,
 body {
-	/* margin: 10px; */
-	font-family: "Calibri";
+	font-family: "Roboto";
 	font-size: 16px;
 	color: #3c4241;
 	line-height: 30px
@@ -31,21 +39,31 @@ div {
 	padding-left: 10px
 }
 .me {
-	max-width: 1000px
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row
 }
 .experience {
+	align-self: stretch;
+	flex-direction: column;
+	flex-grow: 5;
+	line-height: 40px;
 	max-width: 1000px
 }
-.idol {
+.rightcolumn {
+	background-color: transparent;
 	background-color: #e6ffe0;
-	margin-right: 20px;
+	width: 500px;
+	float: right
+}
+.aboutme {
+}
+.idol {
 	text-align: center;
 	line-height: 19px;
-	padding-top: 10px;
-	width: 450px;
-	height: 450px
 }
 .quote {
+	align-self: flex-end;
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px
@@ -53,7 +71,7 @@ div {
 .code {
 }
 span.quote {
-	font-style: italic;
+	font-family: "PlayfairDisplay";
 	font-size: 25px
 }
 code {
@@ -66,4 +84,5 @@ img.me {
 	height: 80px;
 	border-radius: 50%;
 	margin-top: 10px;
+	margin-right: 10px
 }
