@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("Roboto-Regular.ttf")
+}
+@font-face {
+    font-family: "PlayfairDisplay";
+    src: url("PlayfairDisplay-VariableFont_wght.ttf")
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    background-image: url(circuit.jpg);
+    background-repeat: repeat-y;
+    background-size: cover;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    font-family: "Roboto";
+}
+header {
+    background-color: black;
+    margin: 0;
+    padding: 50px;
+}
+div.header {
+    padding: 0;
+    position: fixed;
+}
+.header-flex {
+    display: flex;
+    flex-direction: row;
+}
+.header-content {
+    margin: 0 auto;
+    color: white;
+}
+div.content-block {
+    margin: 20px;
+    padding: 10px;
+    line-height: 50px;
+    background-color: #5bc0de;
+}
+
+main {
+    display: flex;
+}
+
+div.main-flex {
+    flex-grow: 0.5;
+}

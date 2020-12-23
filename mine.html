@@ -5,37 +5,60 @@
 <!-- <link rel="stylesheet" href="outlines.css"> -->
 <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 	<header>
-		<img src="me.png" class="me"><h1>Бакуш Георгий M33031</h1>
-		<h2>C#, Unity разработчик</h2>
-		<nav>
-			<a href="https://github.com/CoalmanHost">GitHub</a> | <a href="https://vk.com/bakush99">VK</a> | <a href="https://t.me/bg_coalman">Telegram</a>
-		</nav>
-		
+        <div>
+            <img src="me.png" class="me"><h1>Бакуш Георгий M33031</h1>
+            <h2>C#, Unity разработчик</h2>
+            <button id="contactsButton">Контактная информация</button>
+        </div>
 	</header>
-	
+
+    <div id="contacts" class="contacts-popup">
+        <div class="contacts-content">
+            <div class="contacts-flex">
+                <a href="https://github.com/CoalmanHost">GitHub</a> | <a href="https://vk.com/bakush99">VK</a> | <a href="https://t.me/bg_coalman">Telegram</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let contacts = document.getElementById("contacts");
+        let contactsButton = document.getElementById("contactsButton");
+
+        contactsButton.onclick = function () {
+            contacts.style.display = "block";
+        }
+        window.onclick = function(event) {
+            if (event.target == contacts) {
+                contacts.style.display = "none";
+            }
+        }
+    </script>
+
 	<main>
-	<div class="me">
-	<div class="experience">
-	<h3>Мой опыт:</h3>
-	<ul>
-		<li>Разработка на игровом движке Unity со школьных лет. 6 лет в общей сложности.</li>
-		<li>C/C++ в формате университетских дисциплин. Полгода на каждый язык.</li>
-		<li>Короткий факультативный курс по многопоточности в C++.</li>
-		<li>C# в формате университетской дисциплины. Подкрепление знаний по языку.</li>
-		<li>Разработка <a href="https://github.com/CoalmanHost/HeroesLab">игрового проекта на WPF C#</a> в качестве лабораторных работ по объектно-ориентированному программированию.</li>
-		<li>Разработка <a href="https://github.com/CoalmanHost/CorpMessenger">корпоративного мессенджера</a> в качестве учебной практики в конце 2 курса. Получены начальные знания по сетевому взаимодействию в C#, а также по работе с базами данных по технологии Entity Framework.</li>
-		<li>Разработка <a href="https://github.com/CoalmanHost/Minecart">менеджера модификаций для Minecraft</a> с возможностью их сборки в пакеты. Одни пакеты могут наследоваться от других. Проект не закончен, но первая относительно рабочая версия есть.</li>
-		<li>Java в формате университетской дисциплины.</li>
-		<li>Разработка простой <a href="https://github.com/CoalmanHost/medkit-mod-minecraft">модификации</a> для Minecraft, добавляющей в игру полностью рабочий вариант аптечки.</li>
-	</ul>
-	</div>
-	<aside>
-	<div class="rightcolumn">
-	<div class="rightcolumn idol">
-	<h3>Моё тотемное животное:</h3>
-	<pre>
+        <div class="main-flex">
+            <div class="me">
+                <div class="experience">
+                    <h3>Мой опыт:</h3>
+                    <ul>
+                        <li>Разработка на игровом движке Unity со школьных лет. 6 лет в общей сложности.</li>
+                        <li>C/C++ в формате университетских дисциплин. Полгода на каждый язык.</li>
+                        <li>Короткий факультативный курс по многопоточности в C++.</li>
+                        <li>C# в формате университетской дисциплины. Подкрепление знаний по языку.</li>
+                        <li>Разработка <a href="https://github.com/CoalmanHost/HeroesLab">игрового проекта на WPF C#</a> в качестве лабораторных работ по объектно-ориентированному программированию.</li>
+                        <li>Разработка <a href="https://github.com/CoalmanHost/CorpMessenger">корпоративного мессенджера</a> в качестве учебной практики в конце 2 курса. Получены начальные знания по сетевому взаимодействию в C#, а также по работе с базами данных по технологии Entity Framework.</li>
+                        <li>Разработка <a href="https://github.com/CoalmanHost/Minecart">менеджера модификаций для Minecraft</a> с возможностью их сборки в пакеты. Одни пакеты могут наследоваться от других. Проект не закончен, но первая относительно рабочая версия есть.</li>
+                        <li>Java в формате университетской дисциплины.</li>
+                        <li>Разработка простой <a href="https://github.com/CoalmanHost/medkit-mod-minecraft">модификации</a> для Minecraft, добавляющей в игру полностью рабочий вариант аптечки.</li>
+                    </ul>
+                </div>
+                <aside>
+                    <div class="rightcolumn">
+                        <div class="rightcolumn idol">
+                            <h3>Моё тотемное животное:</h3>
+                            <pre>
 ████████████████████████████████████████
 ████████████████▀▀██████████████████████
 █░▀▀██████████░▄▄░░▀████████████████████
@@ -56,20 +79,25 @@
 █░░░▄▄▄▄▄▄██████████████████████████████
 █▄██████████████████████████████████████
 	</pre>
-	</div>
-	
-	<div class="rightcolumn aboutme">
-	<h3>Кратко о себе:</h3>
-	<article>В данный момент являюсь студентом Университета ИТМО. Обучаюсь на направлении 09.03.02 "Информационные системы и технологии", третий курс. По профилю не работаю и пока не работал, но очень увлекаюсь разработкой игр разного масштаба на игровом движке Unity. Считаю, что при должном усердии мог бы переквалифицироваться  в кого-либо другого.</article>
-	</div>
-	</div>
-	</aside>
-	</div>
-	
-	
-	<div class="code">
-	<h3 align="center">Код, за который мне не стыдно:</h3>
-	<code>
+                        </div>
+
+                        <div class="rightcolumn aboutme">
+                            <h3>Кратко о себе:</h3>
+                            <article>В данный момент являюсь студентом Университета ИТМО. Обучаюсь на направлении 09.03.02 "Информационные системы и технологии", третий курс. По профилю не работаю и пока не работал, но очень увлекаюсь разработкой игр разного масштаба на игровом движке Unity. Считаю, что при должном усердии мог бы переквалифицироваться  в кого-либо другого.</article>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!--	<div class="icons">-->
+            <!--		<img src="unity_logo.png" class="icon">-->
+            <!--		<img src="visualstudio_logo.jpg" class="icon">-->
+            <!--		<img src="telegram_logo.png" class="icon">-->
+            <!--	</div>-->
+
+            <div class="code">
+                <h3 align="center">Код, за который мне не стыдно:</h3>
+                <code>
 	<pre>
     public static Shape CreateFromMesh(Mesh mesh)
     {
@@ -143,20 +171,21 @@
         return shape;
     }
 	</pre>
-	</code>
-	</div>
-	
-	<div class="quote">
-	<h3>Любимая цитата:</h3>
-	<span class="quote">
+                </code>
+            </div>
+
+            <div class="quote">
+                <h3>Любимая цитата:</h3>
+                <span class="quote">
 	<p><b>Не важно как ты ударишь, а важно какой держишь удар!</strong></b></p>
 	</span>
-	</div>
-	
-	</main>
-	
+            </div>
+        </div>
+    </main>
+
 	<footer align="center">
 	CoalmanHost, 2020
 	</footer>
 </body>
+<!--<script src="example.js"></script>-->
 </html>
