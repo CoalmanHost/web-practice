@@ -9,11 +9,68 @@
 <body>
 	<header>
         <div>
-            <img src="me.png" class="me"><h1>Бакуш Георгий M33031</h1>
+            <img id="me" src="me.png" class="me"><h1>Бакуш Георгий M33031</h1>
             <h2>C#, Unity разработчик</h2>
             <button id="contactsButton">Контактная информация</button>
+            <button id="chatButton">Чат</button>
         </div>
 	</header>
+
+    <script>
+        let picNumber = 0;
+        let pic = document.getElementById("me");
+
+        pic.onclick = function() {
+            picNumber = (picNumber + 1) % 3;
+            pic.src = "./pics/me/me" + picNumber + ".png";
+        }
+    </script>
+
+    <div id="chat" class="chat-popup">
+        <div class="chat-content">
+            <div class="chat-messages-box">
+
+<!--                <div class="chat-message-row">-->
+<!--                    <div class="chat-incoming-message-box">-->
+<!--                        <div class="chat-incoming-message">-->
+<!--                            <div class="chat-message-text">Hi!</div>-->
+<!--                        </div>-->
+<!--                        <button class="delete-message">x</button>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="chat-message-row">-->
+<!--                    <div class="chat-outcoming-message-box">-->
+<!--                        <button class="delete-message">x</button>-->
+<!--                        <div class="chat-outcoming-message">-->
+<!--                            <div class="chat-message-text">1grdshguoihsdsuogfhsuodhfuodashfui9h</div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+            </div>
+            <div style="background: inherit; display: flex; flex-direction: row; width: 90%; flex-grow: 999; margin-top: 10px;">
+                <input class="chat-input">
+                <button class="chat-submit">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
+
+    <script>
+        let chat = document.getElementById("chat");
+        let chatButton = document.getElementById("chatButton");
+
+        chatButton.onclick = function () {
+            chat.style.display = "block";
+        }
+        window.addEventListener("click", function(event) {
+            if (event.target == chat) {
+                chat.style.display = "none";
+            }
+        })
+    </script>
 
     <div id="contacts" class="contacts-popup">
         <div class="contacts-content">
@@ -30,11 +87,11 @@
         contactsButton.onclick = function () {
             contacts.style.display = "block";
         }
-        window.onclick = function(event) {
+        window.addEventListener("click", function(event) {
             if (event.target == contacts) {
                 contacts.style.display = "none";
             }
-        }
+        })
     </script>
 
 	<main>
@@ -187,5 +244,4 @@
 	CoalmanHost, 2020
 	</footer>
 </body>
-<!--<script src="example.js"></script>-->
 </html>
