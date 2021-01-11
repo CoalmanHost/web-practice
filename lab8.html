@@ -22,32 +22,66 @@
 
 <main>
     <div class="main-flex">
-        <div class="content-block">
-            В нашем сервисе вы сможете получить услуги по:
-            <li>Ремонту Вашего ПК. Принимаем неисправности любой сложности.</li>
-            <li>Сборке Вашего нового ПК. Поможем подобрать комплектующие, правильно всё собрать и настроить. Вы получаете ПК, полностью готовый к работе.</li>
-            <li>Так же вы можете приобрести комплектующие для Вашего ПК для замены или модернизации. Поможем правильно это сделать.</li>
+        <div style="display: flex; flex-direction: row; align-items: baseline;">
+            <div class="content-block">
+                В нашем сервисе вы сможете получить услуги по:
+                <li>Ремонту Вашего ПК. Принимаем неисправности любой сложности.</li>
+                <li>Сборке Вашего нового ПК. Поможем подобрать комплектующие, правильно всё собрать и настроить. Вы получаете ПК, полностью готовый к работе.</li>
+                <li>Так же вы можете приобрести комплектующие для Вашего ПК для замены или модернизации. Поможем правильно это сделать.</li>
+            </div>
+            <div class="content-block">
+                <div>
+                    Специальное предложение:
+                </div>
+                Замена и настройка комплектующих бесплатна, если они были приобретены у нас.
+            </div>
         </div>
         <div class="content-block">
-            <div style="width: 25%; height: 25%">
-                <img src="pics/services/fix.png" width="300px" height="200px">
+            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                <div style="width: auto; height: auto; size: auto;">
+                    <img src="pics/services/fix.png" width="300px" height="200px">
+                </div>
+                <div style="width: auto; height: auto; size: auto;">
+                    <img src="pics/services/assemble.png" width="300px" height="200px">
+                </div>
+                <div style="width: auto; height: auto; size: auto;">
+                    <img src="pics/services/buff.png" width="300px" height="200px">
+                </div>
             </div>
-            <div style="width: 25%; height: 25%">
-                <img src="pics/services/assemble.png" width="300px" height="200px">
+        </div>
+        <div class="content-block">
+            Наши предложения:
+            /*тут ручками долго делать или фреймворк какой-то нужен*/
+        </div>
+        <div class="content-block" id="replies">
+            Отзывы:
+            <div class="reply">
+                Михаил:
+                <div class="reply-content">
+                    Отнёс сюда свой старый компьютер, которому уже лет 10 было. Перестал запускаться и всё. Здесь довольно быстро и без лишних заморочек всё сделали. В общем, остался доволен, а старичок мой ещё долго жить будет!
+                </div>
             </div>
-            <div style="width: 25%; height: 25%">
-                <img src="pics/services/buff.png" width="300px" height="200px">
+        </div>
+        <div class="content-row">
+            <div class="content-block">
+                Оставить отзыв... /*надо скрипты писать*/
+                <p><label>Ваше имя:</label><input id="reply-input-name" name="name" type="text"/></p>
+                <p><label>Ваша почта:</label><input id="reply-input-email" name="email" type="text"/></p>
+                <p><label>Ваш отзыв:</label><input id="reply-input-text" style="width: 100%; height: 100%;" name="reply" type="text"/></p>
+                <button id="reply-submit">Отправить</button>
+            </div>
+            <div class="content-column">
+                <div class="content-block" style="margin-bottom: 0;">
+                    <p>Наш адрес</p>
+                    г. Санкт-Петербург, Кронверкский проспект д.49 лит.А
+                </div>
+                <div class="content-block" style="width: 600px; height: 450px; margin-top: 0;">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12501.237406671231!2d30.297704824944166!3d59.95772501694393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963141499f00b9%3A0x630ff799025ac60a!2z0KPQvdC40LLQtdGA0YHQuNGC0LXRgiDQmNCi0JzQng!5e0!3m2!1sru!2sru!4v1610341643513!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
             </div>
         </div>
     </div>
-    <aside>
-        <div class="content-block">
-            Специальное предложение:
-
-            Замена и настройка комплектующих бесплатна, если они были приобретены у нас.
-        </div>
-    </aside>
 </main>
-
 </body>
+<script src="lab8.js"></script>
 </html>

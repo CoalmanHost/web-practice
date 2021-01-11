@@ -20,8 +20,11 @@ header {
 	padding-bottom: 10px;
 	line-height: 10px
 }
+div.header {
+	background-color: #EDFFFF;
+}
 i.vklogo {
-	background-image: url(vk.png)
+	/*background-image: url(vk.png)*/
 }
 footer {
 	background-color: #EDFFFF
@@ -185,7 +188,7 @@ div {
 	line-height: 19px;
 }
 .quote {
-	align-self: flex-end;
+	/*align-self: flex-end;*/
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px

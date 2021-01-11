@@ -10,20 +10,25 @@
 body {
     width: 100%;
     margin: 0;
-    background-image: url(circuit.jpg);
-    background-repeat: repeat-y;
-    background-size: cover;
-    backdrop-filter: blur(5px);
-    position: fixed;
+    /*background-image: url(circuit.jpg);*/
+    /*background-repeat: repeat-y;*/
+    /*background-size: cover;*/
+    /*backdrop-filter: blur(5px);*/
+    background-color: #f2f1ed;
+    /*position: fixed;*/
+    overflow: auto;
     font-family: "Roboto";
 }
 header {
-    background-color: black;
-    margin: 0;
-    padding: 50px;
+    /*margin: 0;*/
+
 }
 div.header {
-    padding: 0;
+    padding: 50px;
+    margin: 0;
+    width: 100%;
+    /*padding: 0;*/
+    background-color: #6a6a6a;
     position: fixed;
 }
 .header-flex {
@@ -35,16 +40,42 @@ div.header {
     color: white;
 }
 div.content-block {
+    width: auto;
+    height: auto;
     margin: 20px;
     padding: 10px;
     line-height: 50px;
-    background-color: #5bc0de;
+    background-color: #cadef2;
+    /*border: 1px solid black;*/
 }
+div.content-row {
+    display: flex;
+    flex-direction: row;
+}
+div.content-column {
+    display: flex;;
+    flex-direction: column;
+}
+div.reply {
+    margin: inherit;
+    line-height: 30px;
+    max-width: 300px;
+    width: auto;
+}
+.reply-content {
+    font-family: "PlayfairDisplay";
+    font-size: 10pt;
+    line-height: 20px;
+}
+div.reply-form {
 
+}
 main {
     display: flex;
 }
 
 div.main-flex {
+    padding-top: 110px;
+    width: 98%;
     flex-grow: 0.5;
 }

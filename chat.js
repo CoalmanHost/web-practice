@@ -77,8 +77,14 @@ function closeMessage(e) {
     e.remove();
 }
 
+let prev_rand = 0;
+
 function rand(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
+    res = Math.floor(Math.random() * (max - min)) + min;
+    while (res == prev_rand) {
+        res = Math.floor(Math.random() * (max - min)) + min;
+    }
+    return res;
 }
