@@ -2,10 +2,12 @@
     font-family: "Roboto";
     src: url("../Roboto-Regular.ttf")
 }
+
 @font-face {
     font-family: "RobotoBold";
     src: url("Roboto-Bold.ttf")
 }
+
 @font-face {
     font-family: "PlayfairDisplay";
     src: url("../PlayfairDisplay-VariableFont_wght.ttf")
@@ -13,7 +15,8 @@
 html {
 
 }
-body {
+
+/*body {
     background-image: url(../circuit.jpg);
     background-repeat: repeat-y;
     background-size: 100%;
@@ -22,71 +25,32 @@ body {
     box-sizing: border-box;
     margin: 0;
     width: 100%;
-    /*background-color: #CCD3D6;*/
-    /*position: fixed;*/
+    !*background-color: #CCD3D6;*!
+    !*position: fixed;*!
     overflow: auto;
-    font-family: "Roboto";
+    font-family: "Roboto", serif;
+}*/
+body {
+    font-family: "Roboto", serif;
 }
-header {
-    /*margin: 0;*/
-}
-div {
-    box-sizing: border-box;
-}
-div.header {
-    padding: 50px;
-    margin: 0;
-    width: 100%;
-    /*padding: 0;*/
-    background-color: #6a6a6a;
-    float: top;
-    position: fixed;
-}
-.header-flex {
-    display: flex;
-    flex-direction: row;
-}
-.header-content {
-    /*margin: 0 auto;*/
-    color: white;
-}
-.hello-block {
-    width: 100%;
-    height: 800px;
-    margin: 0;
-    background-image: url(pics/wide.jpg);
-    background-size: 100%;
-    /*padding: 25%;*/
-}
-.hello-block-content {
-    font-size: 30pt;
-    color: white;
-    font-family: "RobotoBold";
-    padding: 25%;
-    text-align: center;
-    /*transform: translate(0, 50%);*/
-}
-.hello-block-text {
-    padding: 15px;
-    background-color: #909dab;
-}
+
 div.window-block {
     margin: 0;
     padding: 10px;
     width: 98vw;
     height: 90vh;
 }
+
 div.content-block {
     width: auto;
     height: auto;
     margin: 20px;
     padding: 10px;
-    line-height: 50px;
-    /*background-color: #cadef2;*/
-    background-color: #C3D9E2;
-    /*border: 1px solid black;*/
+
+    background: #ebf6ff;
     border-radius: 5px;
 }
+
 .service-block {
     margin: 20px;
     padding: 10px;
@@ -95,14 +59,17 @@ div.content-block {
     width: 30%;
     height: 100%;
 }
+
 div.content-row {
     display: flex;
     flex-direction: row;
 }
+
 div.content-column {
     display: flex;;
     flex-direction: column;
 }
+
 div.reply {
     margin-bottom: 10px;
     margin-top: 10px;
@@ -110,8 +77,9 @@ div.reply {
     max-width: 50%;
     width: auto;
 }
+
 .reply-content {
-    font-family: "PlayfairDisplay";
+    font-family: "PlayfairDisplay", serif;
     font-size: 12pt;
     line-height: 30px;
     background-color: white;
@@ -119,9 +87,11 @@ div.reply {
     border-radius: 1px;
     padding: 2px;
 }
+
 div.reply-form {
 
 }
+
 .reply-form-row {
     display: flex;
     flex-direction: row;
@@ -129,6 +99,7 @@ div.reply-form {
     align-items: center;
     width: 80%;
 }
+
 main {
     display: flex;
 }
@@ -138,4 +109,81 @@ div.main-flex {
     width: 98%;
     flex-grow: 0.5;
     padding-bottom: 50px;
+}
+
+.video-background {
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-background video {
+    margin-top: -200px;
+}
+
+.hello-text {
+    /*width: 100px;*/
+    /*height: 100px;*/
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    color: white;
+    white-space: nowrap;
+    align-self: center;
+    font-size: 5em;
+    font-weight: bolder;
+    text-shadow: 0 0 6px #000;
+}
+
+.carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*height: 140px;*/
+    padding-top: 60px;
+    /*background: red;*/
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+}
+
+.carousel-item {
+   height: 700px;
+}
+
+.carousel-caption {
+    line-height: 1.4;
+    text-shadow: 0 0 4px #000;
+}
+
+.carousel-inner{
+    border-radius: 10px;
+}
+
+.review-container {
+    display: flex;
+}
+
+.review-container .card {
+    margin: 10px;
+}
+.review-container img {
+    width: 50%;
+    align-self: center;
+    margin: 10px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+}
+
+.navbar-brand {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 1.5rem;
+    text-shadow: 0 0 6px orange;
 }
