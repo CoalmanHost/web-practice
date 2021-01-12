@@ -18,27 +18,24 @@
                 </div>
             </div>
         </div>
-        <div><img src="../pics/wide.jfif" width=100%></div>
     </header>
-
+    <div class="hello-block" style="margin-bottom: 0;"><div class="hello-block-content"><div class="hello-block-text">Ремонт, сборка, продажа ПК в СПб</div></div></div>
 <main>
     <div class="main-flex">
-        <div style="display: flex; flex-direction: row; align-items: baseline;">
-            <div class="content-block">
-                В нашем сервисе вы сможете получить услуги по:
-                <li>Ремонту Вашего ПК. Принимаем неисправности любой сложности.</li>
-                <li>Сборке Вашего нового ПК. Поможем подобрать комплектующие, правильно всё собрать и настроить. Вы получаете ПК, полностью готовый к работе.</li>
-                <li>Так же вы можете приобрести комплектующие для Вашего ПК для замены или модернизации. Поможем правильно это сделать.</li>
-            </div>
-            <div class="content-block">
-                <div>
-                    Специальное предложение:
+        <div class="window-block">
+            <div class="content-block">Услуги</div>
+            <div class="content-row" style="align-items: stretch;">
+                <div class="service-block">
+                    <li>Ремонт Вашего ПК. Принимаем неисправности любой сложности.</li>
                 </div>
-                Замена и настройка комплектующих бесплатна, если они были приобретены у нас.
+                <div class="service-block">
+                    <li>Сборка Вашего нового ПК. Поможем подобрать комплектующие, правильно всё собрать и настроить. Вы получаете ПК, полностью готовый к работе.</li>
+                </div>
+                <div class="service-block">
+                    <li>Модернизация Вашего ПК. Также вы можете приобрести комплектующие для Вашего ПК для замены или модернизации. Поможем правильно это сделать.</li>
+                </div>
             </div>
-        </div>
-        <div class="content-block">
-            <div style="display: flex; flex-direction: row; justify-content: space-between;">
+            <div class="content-row" style="justify-content: space-evenly;">
                 <div style="width: auto; height: auto; size: auto;">
                     <img src="../pics/services/fix.png" width="300px" height="200px">
                 </div>
@@ -50,39 +47,78 @@
                 </div>
             </div>
         </div>
-        <div class="content-block">
-            Наши предложения:
-            /*тут ручками долго делать или фреймворк какой-то нужен*/
-        </div>
-        <div class="content-block" id="replies">
-            Отзывы:
-            <div class="reply">
-                Михаил:
-                <div class="reply-content">
-                    Отнёс сюда свой старый компьютер, которому уже лет 10 было. Перестал запускаться и всё. Здесь довольно быстро и без лишних заморочек всё сделали. В общем, остался доволен, а старичок мой ещё долго жить будет!
+        <div class="window-block">
+            <div class="content-row" style="justify-content: center;">
+                <div class="content-block" style="padding: 0; margin-right: 0; width :50%;">
+                    <img src="pics/special.jpeg" width="100%" height="100%">
+                </div>
+                <div class="content-block" style="width: 40%; margin-left: 0; padding-top: 10%; font-family: 'RobotoBold'; font-size: 20pt;">
+                    <div>
+                        Специальное предложение:
+                    </div>
+                    Замена и настройка комплектующих бесплатна, если они были приобретены у нас.
                 </div>
             </div>
         </div>
-        <div class="content-row">
+<!--        <div class="content-block">-->
+<!--            Наши предложения:-->
+<!--            /*тут ручками долго делать или фреймворк какой-то нужен*/-->
+<!--        </div>-->
+        <div class="window-block">
             <div class="content-block">
-                Оставить отзыв... /*надо скрипты писать*/
-                <p><label>Ваше имя:</label><input id="reply-input-name" name="name" type="text"/></p>
-                <p><label>Ваша почта:</label><input id="reply-input-email" name="email" type="text"/></p>
-                <p><label>Ваш отзыв:</label><input id="reply-input-text" style="width: 100%; height: 100%;" name="reply" type="text"/></p>
-                <button id="reply-submit">Отправить</button>
-            </div>
-            <div class="content-column">
-                <div class="content-block" style="margin-bottom: 0;">
-                    <p>Наш адрес</p>
-                    г. Санкт-Петербург, Кронверкский проспект д.49 лит.А
+                <div class="content-block" style="font-family: 'RobotoBold'; font-size: 20pt;">
+                    Отзывы
                 </div>
-                <div class="content-block" style="width: 600px; height: 450px; margin-top: 0;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12501.237406671231!2d30.297704824944166!3d59.95772501694393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963141499f00b9%3A0x630ff799025ac60a!2z0KPQvdC40LLQtdGA0YHQuNGC0LXRgiDQmNCi0JzQng!5e0!3m2!1sru!2sru!4v1610341643513!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <div  id="replies" style="display: flex; flex-direction: column; margin-left: 10%; line-height: 20px;">
+                    <div class="reply">
+                        Михаил:
+                        <div class="reply-content">
+                            Отнёс сюда свой старый компьютер, которому уже лет 10 было. Перестал запускаться и всё. Здесь довольно быстро и без лишних заморочек всё сделали. В общем, остался доволен, а старичок мой ещё долго жить будет!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="window-block">
+            <div class="content-row" style="height: 100%; justify-content: space-evenly;">
+                <div class="content-block" style="display: flex; flex-direction: column; align-items: center;">
+                    Оставить отзыв... /*надо скрипты писать*/
+                    <div class="reply-form-row">
+                        <p>
+                        <div style="width: 50%;"><label>Ваше имя:</label></div>
+                        <div style="width: 50%;"><input id="reply-input-name" name="name" type="text"/></div>
+                        </p>
+                    </div>
+                    <div class="reply-form-row">
+                        <p>
+                        <div style="width: 50%;"><label>Ваша почта:</label></div>
+                        <div style="width: 50%;"><input id="reply-input-email" name="email" type="text"/></div>
+                        </p>
+                    </div>
+                    <div class="content-column" style="width: 90%; height: 40%;">
+                        <p>
+                        <div style="width: 50%;"><label>Ваш отзыв:</label></div>
+                        <div style="width: 100%; height: 90%;"><textarea id="reply-input-text" style="width: 100%; height: 100%; text-align: left;" name="reply" type="text"></textarea></p></div>
+                    </div>
+                    <div class="reply-form-row">
+                        <p>
+                            <button id="reply-submit">Отправить</button>
+                        </p>
+                    </div>
+                </div>
+                <div class="content-column">
+                    <div class="content-block" style="margin-bottom: 0; width: 100%;">
+                        <p>Наш адрес</p>
+                        г. Санкт-Петербург, Кронверкский проспект д.49 лит.А
+                    </div>
+                    <div class="content-block" style="width: 100%; height: 90%; margin-top: 0;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12501.237406671231!2d30.297704824944166!3d59.95772501694393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963141499f00b9%3A0x630ff799025ac60a!2z0KPQvdC40LLQtdGA0YHQuNGC0LXRgiDQmNCi0JzQng!5e0!3m2!1sru!2sru!4v1610341643513!5m2!1sru!2sru" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
-</body>
 <script src="lab8.js"></script>
+</body>
 </html>

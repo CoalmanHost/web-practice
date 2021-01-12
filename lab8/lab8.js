@@ -12,9 +12,11 @@ function SubmitReply() {
     let form = htmlReplyForm.toString();
     let newReply = document.createElement('div');
     newReply.classList.toggle("reply");
-    newReply.innerHTML = replyNameInput.value.toString() + form;
-    console.log(newReply.querySelector('.reply-content').outerHTML);
+    newReply.innerHTML = replyNameInput.value.toString() + ":" + form;
     newReply.querySelector('.reply-content').innerText = replyTextInput.value;
     repliesContainer.appendChild(newReply);
+    replyNameInput.value = "";
+    replyEmailInput.value = "";
+    replyTextInput.value = "";
 }
 replySubmitButton.addEventListener("click", SubmitReply);
