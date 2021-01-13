@@ -41,7 +41,7 @@
                 type="video/mp4">
     </video>
 
-    <div class="hello-text">
+    <div class="hello-text user-select-none">
         Ремонт, сборка, продажа ПК в СПб
     </div>
 </div>
@@ -101,17 +101,16 @@
 
 
         <div class="window-block">
-            <div class="content-block" style="padding: 0;">
-                <div class="content-row" style="justify-content: space-between;">
-                    <div class="content-block" style="padding: 0; margin: 0; width :50%;">
-                        <img src="pics/special.jpeg" width="100%" height="100%">
-                    </div>
-                    <div class="content-block"
-                         style="width: 40%; margin: 0; padding: 5%; font-family: 'RobotoBold'; font-size: 20pt;">
-                        <div>
+            <div class="content-block">
+                <div class="content-row" style="justify-content: space-between">
+                    <img src="img/services/special.jpg" style="border-radius: 5px; width: 55%" alt="Comp">
+                    <div style="width: 65%; padding: 15px">
+                        <h2>
                             У нас действует постоянная акция:
-                        </div>
+                        </h2>
+                        <h4>
                         Замена и настройка комплектующих бесплатна, если они были приобретены у нас.
+                        </h4>
                     </div>
                 </div>
             </div>
@@ -139,11 +138,15 @@
                         <div class="card-body">
                             <h5 class="card-title">Lorem ipsum</h5>
                             <p class="card-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut
+                                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                ullamco
+                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                in
                                 voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                laborum</p>
                             <footer class="blockquote-footer">Иван</footer>
                         </div>
                     </div>
@@ -154,45 +157,43 @@
 
         <div class="window-block">
             <div class="content-row" style="padding: 0; justify-content: space-around;">
-                <div class="content-column content-block" style="align-items: center; width: 50%;">
-                    <div class="content-block" style="font-family: 'RobotoBold'; font-size: 20pt;">
+                <div class="content-column content-block" style="width: 35%;">
+                    <h2>
                         Оставить отзыв
+                    </h2>
+                    <div class="input-form">
+                        <label for="fname">Ваше имя:</label>
+                        <input type="text" id="fname" name="fname"><br>
                     </div>
-                    <div class="reply-form-row">
-                        <p>
-                        <div style="width: 50%;"><label>Ваше имя:</label></div>
-                        <div style="width: 50%;"><input id="reply-input-name" name="name" type="text"/></div>
-                        </p>
+                    <div class="input-form">
+                        <label for="lname">Ваша почта:</label>
+                        <input type="text" id="lname" name="lname"><br>
                     </div>
-                    <div class="reply-form-row">
-                        <p>
-                        <div style="width: 50%;"><label>Ваша почта:</label></div>
-                        <div style="width: 50%;"><input id="reply-input-email" name="email" type="text"/></div>
-                        </p>
-                    </div>
+
                     <div class="content-column" style="width: 100%; height: 40%;">
-                        <p>
                         <div style="width: 50%;"><label>Ваш отзыв:</label></div>
-                        <div style="width: 100%; height: 90%;"><textarea id="reply-input-text"
-                                                                         style="width: 100%; height: 100%; text-align: left;"
-                                                                         name="reply" type="text"></textarea></p></div>
+                        <div style="width: 100%; height: 100%;">
+                            <textarea id="reply-input-text"
+                                      style="width: 100%; height: 100%; text-align: left; resize: none"
+                                      name="reply" type="text" rows="5"></textarea>
+                        </div>
                     </div>
+
                     <div class="reply-form-row">
-                        <p>
-                            <button id="reply-submit">Отправить</button>
-                        </p>
+                        <button id="reply-submit">Отправить</button>
                     </div>
                 </div>
-                <div class="content-column content-block" style="width: 50%; padding: 0">
-                    <div class="content-block" style="margin-bottom: 0; margin-top: 0;">
-                        <div class="content-block" style="font-family: 'RobotoBold'; font-size: 20pt;">
+
+                <div class="content-column content-block" style="width: 65%; padding: 0">
+                    <div style="margin: 10px">
+                        <h2>
                             Наш адрес
-                        </div>
+                        </h2>
                         г. Санкт-Петербург, Кронверкский проспект д.49 лит.А
                     </div>
-                    <div class="content-block" style="height: 90%; margin-top: 0; padding: 1px;">
+                    <div class="content-block" style="min-height: 450px; margin-top: 0; padding: 0px;">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12501.237406671231!2d30.297704824944166!3d59.95772501694393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963141499f00b9%3A0x630ff799025ac60a!2z0KPQvdC40LLQtdGA0YHQuNGC0LXRgiDQmNCi0JzQng!5e0!3m2!1sru!2sru!4v1610341643513!5m2!1sru!2sru"
-                                width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
+                                width="100%" height="100%" frameborder="0" allowfullscreen
                                 aria-hidden="false" tabindex="0"></iframe>
                     </div>
                 </div>
@@ -202,9 +203,9 @@
 </main>
 
 <div style="position: fixed">
-<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button">
-    Вверх!
-</a>
+    <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button">
+        Вверх!
+    </a>
 </div>
 
 </body>

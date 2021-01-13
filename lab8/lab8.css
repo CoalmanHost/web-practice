@@ -1,3 +1,8 @@
+:root {
+    --block-color: rgba(243, 245, 246, 0.9);
+    --main-color: #E0E2DB;
+}
+
 @font-face {
     font-family: "Roboto";
     src: url("../Roboto-Regular.ttf")
@@ -12,31 +17,24 @@
     font-family: "PlayfairDisplay";
     src: url("../PlayfairDisplay-VariableFont_wght.ttf")
 }
+
 body {
-    background-image: url(../circuit.jpg);
-    background-repeat: repeat-y;
-    background-size: 100%;
-    background-attachment: fixed;
-    backdrop-filter: brightness(30%) /*blur(5px)*/;
-    box-sizing: border-box;
+    background-image: url(img/w1.jpg);
+    /*background-repeat: repeat-x;*/
+    background-size: cover;
+    background-position: center;
+    /*background-attachment: fixed;*/
+    /*backdrop-filter: blur(5px);*/
+
     margin: 0;
-    width: 100vw;
-    background-color: #CCD3D6;
-    /*position: fixed;*/
-    overflow: auto;
+    background-color: white;
     font-family: "Roboto", serif;
 }
-/*body {*/
-/*    font-family: "Roboto", serif;*/
-/*}*/
 
 div.window-block {
-    margin: 0;
-    padding: 10px;
-    padding-left: 20%;
-    padding-right: 20%;
-    width: 100vw;
-    min-height: 100vh;
+    margin-bottom: 50px;
+    /*padding: 10px 20%;*/
+    /*width: 100vw;*/
 }
 
 div.content-block {
@@ -45,17 +43,10 @@ div.content-block {
     margin: 20px;
     padding: 10px;
     box-sizing: content-box;
-    background: #ebf6ff;
+    background: var(--block-color);
     border-radius: 5px;
-}
 
-.service-block {
-    margin: 20px;
-    padding: 10px;
-    line-height: 50px;
-    background-color: #cadef2;
-    width: 30%;
-    height: 100%;
+    box-shadow: 0 0 5px #0006;
 }
 
 div.content-row {
@@ -64,7 +55,7 @@ div.content-row {
 }
 
 div.content-column {
-    display: flex;;
+    display: flex;
     flex-direction: column;
 }
 
@@ -102,10 +93,11 @@ div.reply-form {
 
 main {
     display: flex;
+    /*background: var(--main-color);*/
+    margin: 0 15%;
 }
 
 div.main-flex {
-    padding-top: 110px;
     width: 100%;
     padding-bottom: 50px;
     box-sizing: content-box;
@@ -115,6 +107,8 @@ div.main-flex {
     height: 600px;
     overflow: hidden;
     position: relative;
+
+    /*border-bottom: 1px solid lightsteelblue;*/
 }
 
 .video-background video {
@@ -122,18 +116,17 @@ div.main-flex {
 }
 
 .hello-text {
-    /*width: 100px;*/
-    /*height: 100px;*/
+    width: 100%;
 
     position: absolute;
     top: 50%;
     left: 50%;
 
     transform: translate(-50%, -50%);
+    text-align: center;
 
     color: white;
-    white-space: nowrap;
-    align-self: center;
+
     font-size: 5em;
     font-weight: bolder;
     text-shadow: 0 0 6px #000;
@@ -145,12 +138,11 @@ div.main-flex {
     bottom: 0;
     /*height: 140px;*/
     padding-top: 60px;
-    /*background: red;*/
     background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
 }
 
 .carousel-item {
-   height: 700px;
+   height: 650px;
 }
 
 .carousel-caption {
@@ -186,4 +178,18 @@ div.main-flex {
     font-family: 'Bungee Shade', cursive;
     font-size: 1.5rem;
     text-shadow: 0 0 6px orange;
+}
+
+.input-form {
+    display: flex;
+    padding: 10px 0;
+}
+
+.input-form input {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.input-form label {
+    white-space: nowrap;
 }
